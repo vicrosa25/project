@@ -9,7 +9,9 @@ jobs:
       - image: cimg/node:15.11.0
     steps:
       - checkout
-      - run: node --version
-
-
-
+      - run:
+          name: Install dependencies
+          command: yarn
+      - run:
+          name: Run test
+          command: yarn test
